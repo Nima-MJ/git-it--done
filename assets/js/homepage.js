@@ -16,11 +16,11 @@ var getUserRepos = function(user){
             displayRepo(data, user);
             });
         } else{
-            alert("Error: GitHub User Not Found")
+            alert("Error: GitHub User Not Found");
         }
     })
     .catch(function(error) {
-        alert("Unable to connect to GitHub")
+        alert("Unable to connect to GitHub");
     });
 };
 
@@ -77,8 +77,8 @@ var displayRepo = function(repos, searchTerm){
         }
 
         //append container to the dom
-        repoContainerEl.appendChild(repoEl);
         repoEl.appendChild(statusEl);
+        repoContainerEl.appendChild(repoEl);
     }
 };
 
